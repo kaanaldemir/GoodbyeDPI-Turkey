@@ -1,0 +1,17 @@
+@ECHO OFF
+PUSHD "%~dp0"
+set _arch=x86
+IF "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set _arch=x86_64)
+IF DEFINED PROCESSOR_ARCHITEW6432 (set _arch=x86_64)
+
+echo DNS zorlamasini kaldiracak hizmeti yuklemek icin:
+echo Bu batch dosyasini yonetici olarak calistirmaniz gerekmektedir.
+echo Sag Tik - Yonetici Olarak Calistir.
+echo Bu metodu kullaniyorsaniz ayrica Windows ayarlarindan DNS degistirmenize gerek yoktur.
+sc stop "GoodbyeDPI"
+sc delete "GoodbyeDPI"
+sc create "GoodbyeDPI" binPath= "\"%CD%\%_arch%\goodbyedpi.exe\" --set-ttl 3 --dns-addr 77.88.8.8 --dns-port 1253 --dnsv6-addr 2a02:6b8::feed:0ff start= "auto"
+sc description "GoodbyeDPI" "Turkiye icin DNS zorlamasini kaldirir."
+sc start "GoodbyeDPI"
+
+POPD
