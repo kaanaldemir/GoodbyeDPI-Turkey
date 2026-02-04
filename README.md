@@ -20,7 +20,7 @@ Yandex, Cloudflare, Google, Quad9, OpenDNS, AdGuard ve ek filtreli seçenekler d
 ```
 DiscordErisim.exe --uninstall
 ```
-Uygulama yalnızca servisleri kaldırır, dosyaları silmez.
+Uygulama içinden kaldırıldığında yalnızca servisleri kaldırır, dosyaları silmez. 
 
 ## Build
 Çalıştırın:
