@@ -1,6 +1,6 @@
 ﻿# Discord Erişim Aracı
 
-Bu arayüz GoodbyeDPI Turkey paketini kullanır ve `Discord.bat` yerine otomatik, kullanıcı girişi gerektirmeyen bir kurulum sunar.
+Bu arayüz GoodbyeDPI Turkey paketini kullanır ve terminal yerine yerine otomatik, kullanıcı girişi gerektirmeyen bir kurulum sağlayan arayüz sunar.
 
 ## Neler yapar
 - `goodbyedpi-0.2.3rc3-turkey` klasörünü `C:\Program Files\Discord\` içine kopyalar.
